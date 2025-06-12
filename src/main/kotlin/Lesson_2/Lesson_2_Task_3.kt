@@ -4,15 +4,11 @@ fun main() {
 
     val oneHour: Int = 60
 
-    //Выезд
     val hour: Int = 9
     val minute: Int = 39
-
     val calculation = hour * oneHour + minute
 
-    //Путь
     val path: Int = 457
-
     val pathCalculation = path + calculation
 
     val hourPathCalculation = pathCalculation / oneHour
