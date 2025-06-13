@@ -4,12 +4,12 @@ fun main() {
 
     val cristalOre: Int = 7
     val ironOre: Int = 11
+    val buffEffect: Int = 20
 
-    val buffEffect: Float = 0.2f
-
-    val cristalOreBuffEffect = cristalOre * buffEffect
-    val ironOreBuffEffect = ironOre * buffEffect
+    val cristalOreBuffEffect = cristalOre * buffEffect / 100
+    val ironOreBuffEffect = ironOre * buffEffect / 100
 
     println(cristalOreBuffEffect)
     println(ironOreBuffEffect)
+
 }
