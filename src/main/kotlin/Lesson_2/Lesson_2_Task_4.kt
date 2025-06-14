@@ -6,10 +6,12 @@ fun main() {
     val ironOre: Int = 11
     val buffEffect: Int = 20
 
-    val cristalOreBuffEffect = cristalOre * buffEffect / 100
-    val ironOreBuffEffect = ironOre * buffEffect / 100
+    val cristalOreBuffEffect = cristalOre * buffEffect / ONE_HUNDRED
+    val ironOreBuffEffect = ironOre * buffEffect / ONE_HUNDRED
 
     println(cristalOreBuffEffect)
     println(ironOreBuffEffect)
 
 }
+
+const val ONE_HUNDRED = 100
