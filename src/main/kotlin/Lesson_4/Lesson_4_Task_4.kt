@@ -6,17 +6,12 @@ fun main() {
 
     val trainingSessions = day % 2 != 0
 
-    val hands = trainingSessions
-    val legs = !trainingSessions
-    val back = !trainingSessions
-    val abs = trainingSessions
-
     println(
         """
-        Упражнение для рук: ${hands}
-        Упражнение для ног: ${legs}
-        Упражнения для спины: ${back}
-        Упражнения для пресса: ${abs}
+        Упражнение для рук: ${trainingSessions}
+        Упражнение для ног: ${!trainingSessions}
+        Упражнения для спины: ${!trainingSessions}
+        Упражнения для пресса: ${trainingSessions}
     """.trimIndent()
     )
 }
