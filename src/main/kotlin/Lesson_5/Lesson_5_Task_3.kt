@@ -2,10 +2,10 @@ package org.example.Lesson_5
 
 fun main() {
 
+    println("Введите первое число:")
     val inputNumber1 = readln().toInt()
-    println("Ваше первое число: $inputNumber1")
+    println("Введите второе число:")
     val inputNumber2 = readln().toInt()
-    println("Ваше второе число: $inputNumber2")
 
     val scam = if (inputNumber1 == WINNING_NUMBERS && inputNumber2 == WINNING_NUMBERS_2) {
         "Поздравляем! Вы выйграли главный приз!"
@@ -19,5 +19,5 @@ fun main() {
     println(scam)
 }
 
-const val WINNING_NUMBERS = 0
-const val WINNING_NUMBERS_2 = 42
+const val WINNING_NUMBERS = 5
+const val WINNING_NUMBERS_2 = 15
