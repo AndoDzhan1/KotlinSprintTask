@@ -9,6 +9,8 @@ fun main() {
 
     val scam = if (inputNumber1 == WINNING_NUMBERS && inputNumber2 == WINNING_NUMBERS_2) {
         "Поздравляем! Вы выйграли главный приз!"
+    } else if (inputNumber1 == WINNING_NUMBERS_2 && inputNumber2 == WINNING_NUMBERS) {
+        "Поздравляем! Вы выйграли главный приз!"
     } else if (inputNumber1 == WINNING_NUMBERS || inputNumber2 == WINNING_NUMBERS_2) {
         "Вы выйграли утешительный приз!"
     } else {
