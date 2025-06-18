@@ -15,7 +15,7 @@ fun main() {
         } else if (inputNumber1 == WINNING_NUMBERS || inputNumber2 == WINNING_NUMBERS_2 ||
             inputNumber1 == WINNING_NUMBERS_2 || inputNumber2 == WINNING_NUMBERS
         ) {
-            "Вы выйграли утешительный приз!"
+            "Вы выйграли, утешительный приз!"
         } else {
             "Неудача!"
         }
