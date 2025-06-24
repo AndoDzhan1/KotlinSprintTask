@@ -24,6 +24,7 @@ fun main() {
 
         if (createLogin == inputLogin && createPassword == inputPassword) {
             println("Добро пожаловать")
+            break
         } else {
             println("Неверный логин или пароль")
         }
