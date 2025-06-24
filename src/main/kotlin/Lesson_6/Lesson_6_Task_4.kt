@@ -11,6 +11,7 @@ fun main(){
 
         if (guessNumber == answer) {
             println("Это была великолепная игра!")
+            return
         } else {
             println("Неверно! \nОставшееся количество попыток ${attemptsLeft--}")
         }
