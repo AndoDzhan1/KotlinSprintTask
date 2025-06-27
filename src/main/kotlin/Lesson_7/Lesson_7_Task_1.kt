@@ -11,6 +11,6 @@ fun main() {
         } else {
             number.random()
         }
-        print(randomChar)
+        println(randomChar)
     }
 }
