@@ -12,7 +12,7 @@ fun main() {
 
 fun passwordGenerator(inputPassword: Int): String {
 
-    val numbers = "0123456789"
+    val numbers = '0'..'9'
     val symbols = "!#$%&'()*+,-./ "
     var password = ""
 
