@@ -18,7 +18,7 @@ fun main() {
 }
 
 fun validLenght(loginInput: String, passwordInput: String): Boolean {
-    return loginInput.length >= MAGIC_NUMBER && passwordInput.length >= MAGIC_NUMBER
+    return loginInput.length >= MAX_LENGHT && passwordInput.length >= MAX_LENGHT
 }
 
-const val MAGIC_NUMBER = 4
+const val MAX_LENGHT = 4
