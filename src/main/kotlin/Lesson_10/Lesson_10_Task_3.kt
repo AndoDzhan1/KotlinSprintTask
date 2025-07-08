@@ -18,7 +18,7 @@ fun passwordGenerator(inputPassword: Int): String {
 
 
     for (i in 0 until inputPassword) {
-        val randomPass = if (i % 2 == 0) {
+        val randomPass = if (i % 2 ==0) {
             numbers.random()
         } else {
             symbols.random()
