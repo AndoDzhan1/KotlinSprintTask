@@ -5,7 +5,7 @@ class User2 (
     val login: String,
     var password: String,
     val email: String,
-    var bio: String,
+    var bio: String = "",
 )
 
 fun main() {
@@ -19,26 +19,33 @@ fun main() {
 
         )
 
-    println("Введите текущий пароль")
+    println(user1.bio)
+    userInfo(user1)
+    changePassword(user1)
+    userInfo(user1)
+
+}
+
+fun userInfo(user1: User2) {
+
+    println("Ваша информация:")
+    println(user1.login)
+    println(user1.email)
+    println(user1.password)
+
+}
+
+fun changePassword(user1: User2) {
+
+    println("Введите ваш текущий пароль:")
     val inputPassword = readln()
 
     if (inputPassword == user1.password) {
         println("Введите новый пароль")
         user1.password = readln()
-        println("Ваш новый пароль ${user1.password}")
+        println("Ваш новый пароль: ${user1.password}")
     } else {
         println("Пароль введён неверно")
     }
-    println("Введите информацию о себе")
-    user1.bio = readln()
-
-    println()
-
-    println("Ваши данные:")
-
-    println("Логин: ${user1.login}")
-    println("Пароль: ${user1.password}")
-    println("Почта: ${user1.email}")
-    println("БИО: ${user1.bio}")
 
 }
