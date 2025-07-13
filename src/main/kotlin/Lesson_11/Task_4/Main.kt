@@ -15,5 +15,5 @@ class Recipe(
 
 class Ingredient(
     val nameOfIngrdients: List<String>,
-    val methodOfPreparation: String
+    val methodOfPreparation: String,
 )
