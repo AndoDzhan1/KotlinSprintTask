@@ -4,16 +4,17 @@ class RecipeCategory(
     val name: String,
     val image: String,
     val description: String,
+    val recipe: List<String>
 )
 
 class Recipe(
     val name: String,
     val image: String,
-    val ingredients: List<String>,
-    val portions: Int,
+    val ingredients: List<Ingredient>,
 )
 
 class Ingredient(
-    val nameOfIngrdients: List<String>,
-    val methodOfPreparation: String,
+    val name: String,
+    val quantity: Int,
+    val unitOfMeasurement: Int,
 )
