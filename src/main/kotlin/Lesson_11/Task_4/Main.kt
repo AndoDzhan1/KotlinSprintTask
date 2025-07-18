@@ -11,10 +11,11 @@ class Recipe(
     val name: String,
     val image: String,
     val ingredients: List<Ingredient>,
+    val methodOfPreparation: List<String>
 )
 
 class Ingredient(
     val name: String,
-    val quantity: Int,
-    val unitOfMeasurement: Int,
+    val quantity: String,
+    val unitOfMeasurement: Float,
 )
