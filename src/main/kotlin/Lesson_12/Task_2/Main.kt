@@ -3,14 +3,13 @@ package org.example.Lesson_12.Task_2
 class Weather(
     var daytimeTemperature: Int,
     var nighttimeTemperature: Int,
-    var precepitation: Boolean = false
+    var hasPrecipitation: Boolean,
 ) {
-
 
     fun weatherInfo() {
         println("Днём: $daytimeTemperature")
         println("Ночью: $nighttimeTemperature")
-        println("Осадки: $precepitation")
+        println("Осадки: $hasPrecipitation")
     }
 }
 
