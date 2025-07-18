@@ -4,7 +4,7 @@ class RecipeCategory(
     val name: String,
     val image: String,
     val description: String,
-    val recipe: List<String>
+    val recipe: List<Recipe>
 )
 
 class Recipe(
@@ -17,5 +17,9 @@ class Recipe(
 class Ingredient(
     val name: String,
     val quantity: String,
-    val unitOfMeasurement: Float,
+    val gram: String,
+    val tablespoon: String,
+    val leaf: String,
+    val piece: String,
+    val teaspoon: String,
 )
