@@ -17,9 +17,5 @@ class Recipe(
 class Ingredient(
     val name: String,
     val quantity: String,
-    val gram: String,
-    val tablespoon: String,
-    val leaf: String,
-    val piece: String,
-    val teaspoon: String,
+    val unitOfMeasurement: String
 )
