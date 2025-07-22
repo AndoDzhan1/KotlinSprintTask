@@ -19,12 +19,12 @@ class Room(
     }
 
     fun updateStatus(nickname: String, newStatus: String) {
-        for (participant in participants) {
-            if (participant.nickname == nickname) {
-                participant.status = newStatus
-                println("Статус участника \"$nickname\" обновлён на \"$newStatus\".")
-                return
-            }
+        val participant = participants.find { it.nickname == nickname }
+        if (participant != null) {
+            participant.status = newStatus
+            println("Статус участника \"$nickname\" обновлён на \"$newStatus\".")
+        } else {
+            println("Участник с никнеймом \"$nickname\" не найден.")
         }
         println("Участник с никнеймом \"$nickname\" не найден.")
     }
@@ -40,13 +40,13 @@ class Room(
 fun main() {
     val room = Room(".", "Искусство")
 
-    val p1 = Participant("Андо", ".", "разговаривает")
-    val p2 = Participant("Гево", ".", "микрофон выключен")
-    val p3 = Participant("Арту", ".", "пользователь заглушен")
+    val person1 = Participant("Андо", ".", "разговаривает")
+    val person2 = Participant("Гево", ".", "микрофон выключен")
+    val person3 = Participant("Арту", ".", "пользователь заглушен")
 
-    room.addParticipant(p1)
-    room.addParticipant(p2)
-    room.addParticipant(p3)
+    room.addParticipant(person1)
+    room.addParticipant(person2)
+    room.addParticipant(person3)
 
     room.showParticipants()
 
