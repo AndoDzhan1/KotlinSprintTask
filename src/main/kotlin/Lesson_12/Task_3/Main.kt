@@ -2,10 +2,9 @@ package org.example.Lesson_12.Task_3
 
 class DailyWeather(kelvinDay: Int, kelvinNight: Int, precipitation: Boolean) {
 
-    var dayTemperature = (kelvinDay - KELVIN).toInt()
-    var nightTemperature = (kelvinNight - KELVIN).toInt()
-    var hasPrecipitation = precipitation
-
+    val dayTemperature = (kelvinDay - KELVIN).toInt()
+    val nightTemperature = (kelvinNight - KELVIN).toInt()
+    val hasPrecipitation = precipitation
 
     fun showWeatherInfo() {
         println("Днём: $dayTemperature °C")
