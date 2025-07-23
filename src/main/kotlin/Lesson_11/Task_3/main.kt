@@ -26,7 +26,6 @@ class Room(
         } else {
             println("Участник с никнеймом \"$nickname\" не найден.")
         }
-        println("Участник с никнеймом \"$nickname\" не найден.")
     }
 
     fun showParticipants() {
