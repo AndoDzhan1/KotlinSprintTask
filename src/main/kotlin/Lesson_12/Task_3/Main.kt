@@ -1,20 +1,15 @@
 package org.example.Lesson_12.Task_3
 
-class DailyWeather(kelvinDay: Double, kelvinNight: Double, precipitation: Boolean) {
+class DailyWeather(kelvinDay: Int, kelvinNight: Int, precipitation: Boolean) {
 
-    var dayTemperature: Int
-    var nightTemperature: Int
-    var hasPrecipitation: Boolean
+    var dayTemperature = (kelvinDay - KELVIN).toInt()
+    var nightTemperature = (kelvinNight - KELVIN).toInt()
+    var hasPrecipitation = precipitation
 
-    init {
-        dayTemperature = (kelvinDay - 273.15).toInt()
-        nightTemperature = (kelvinDay - 273.15).toInt()
-        hasPrecipitation = precipitation
-    }
 
     fun showWeatherInfo() {
-        println("Днём: $dayTemperature")
-        println("Ночью: $nightTemperature")
+        println("Днём: $dayTemperature °C")
+        println("Ночью: $nightTemperature °C")
         println("Осадки: $hasPrecipitation")
     }
 }
@@ -22,11 +17,13 @@ class DailyWeather(kelvinDay: Double, kelvinNight: Double, precipitation: Boolea
 fun main() {
 
     val sunday = DailyWeather(
-        kelvinDay = 303.15,
-        kelvinNight = 288.15,
+        kelvinDay = 303,
+        kelvinNight = 288,
         precipitation = true
     )
 
     sunday.showWeatherInfo()
 
 }
+
+const val KELVIN = 273.15
