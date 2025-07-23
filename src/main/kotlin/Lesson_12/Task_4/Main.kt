@@ -7,12 +7,12 @@ class DailyWeather(kelvinDay: Double, kelvinNight: Double, precipitation: Boolea
     var hasPrecipitation: Boolean
 
     init {
-        dayTemperature = (kelvinDay - 273.15).toInt()
-        nightTemperature = (kelvinDay - 273.15).toInt()
+        dayTemperature = (kelvinDay - KELVIN).toInt()
+        nightTemperature = (kelvinDay - KELVIN).toInt()
         hasPrecipitation = precipitation
 
-        println("Днём: $dayTemperature")
-        println("Ночью: $nightTemperature")
+        println("Днём: $dayTemperature °C")
+        println("Ночью: $nightTemperature °C")
         println("Осадки: $hasPrecipitation")
     }
 
@@ -26,3 +26,5 @@ fun main() {
         precipitation = true,
     )
 }
+
+const val KELVIN = 273.15
