@@ -8,7 +8,7 @@ class DailyWeather(kelvinDay: Double, kelvinNight: Double, precipitation: Boolea
 
     init {
         dayTemperature = (kelvinDay - KELVIN).toInt()
-        nightTemperature = (kelvinDay - KELVIN).toInt()
+        nightTemperature = (kelvinNight - KELVIN).toInt()
         hasPrecipitation = precipitation
 
         println("Днём: $dayTemperature °C")
