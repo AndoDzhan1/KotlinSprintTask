@@ -6,7 +6,7 @@ class PhoneContact(
     val company: String? = null,
 ) {
 
-    fun contactInfo() {
+    fun showContactInfo() {
         val companyInfo = company ?: "Не указано"
         println("Имя: $name \nНомер: $phoneNumber \nКомпания: $companyInfo")
     }
@@ -19,13 +19,8 @@ fun main() {
         "Ростислав",
         89123456789,
         "Reddit"
+    )
 
-        )
-
-    if (user.company != null) {
-        println("Всё ок!")
-    }
-
-    user.contactInfo()
+    user.showContactInfo()
 
 }
