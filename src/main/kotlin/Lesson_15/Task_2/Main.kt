@@ -18,7 +18,11 @@ class PrecipitationAmount(val mm: Double) : WeatherStationStats() {
 
 class WeatherServer () {
     fun sendInfo(data: WeatherStationStats) {
-        println("Отправка данных на сервер ${data.getInfo()}")
+        when(data) {
+            is Temperature,
+            is PrecipitationAmount -> println("Отправка данных на сервер ${data.getInfo()}")
+            else -> println("Ошибка: неподдерживаемый тип данных ${data::class.simpleName}")
+        }
     }
 }
 
