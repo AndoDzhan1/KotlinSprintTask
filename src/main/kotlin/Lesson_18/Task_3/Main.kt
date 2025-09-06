@@ -2,6 +2,9 @@ package org.example.Lesson_18.Task_3
 
 abstract class Animal(val name: String) {
     abstract fun eat()
+    open fun sleep() {
+        println("$name -> спит")
+    }
 }
 
 class Fox(name: String) : Animal(name) {
@@ -31,5 +34,6 @@ fun main() {
 
     for (animal in animals) {
         animal.eat()
+        animal.sleep()
     }
 }
