@@ -1,9 +1,9 @@
 package org.example.Lesson_19.Task_3
 
-class SpaceShip() {
+class SpaceShip {
 
     fun takeOff() {
-        // TODO: Логика взлёта
+        TODO("Логика взлёта")
     }
 
     fun landing() {
@@ -11,7 +11,7 @@ class SpaceShip() {
     }
 
     fun shooting() {
-        // TODO: Логика отстрела
+        TODO("Логика выстрелов")
     }
 }
 
