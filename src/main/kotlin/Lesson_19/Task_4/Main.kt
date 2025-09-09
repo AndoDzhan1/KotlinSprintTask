@@ -8,7 +8,7 @@ enum class Bullets(val title: String, val damage: Int) {
 
 class Tank(private var slug: Bullets? = null) {
 
-    fun newBullets(bullets: Bullets) {
+    fun loadAmmo(bullets: Bullets) {
         slug = bullets
         println("Заряжен новый патрон: ${slug?.title}")
     }
@@ -20,19 +20,19 @@ class Tank(private var slug: Bullets? = null) {
             println("Был нанесён урон в ${slug?.damage} единиц")
         }
     }
+}
 
-    fun main() {
-        val tank1 = Tank()
+fun main() {
+    val tank1 = Tank()
 
-        tank1.newBullets(Bullets.BLUE)
-        tank1.shooting()
-        println()
+    tank1.loadAmmo(Bullets.BLUE)
+    tank1.shooting()
+    println()
 
-        tank1.newBullets(Bullets.GREEN)
-        tank1.shooting()
-        println()
+    tank1.loadAmmo(Bullets.GREEN)
+    tank1.shooting()
+    println()
 
-        tank1.newBullets(Bullets.RED)
-        tank1.shooting()
-    }
+    tank1.loadAmmo(Bullets.RED)
+    tank1.shooting()
 }
