@@ -14,21 +14,25 @@ class Tank(private var slug: Bullets? = null) {
     }
 
     fun shooting() {
-        println("Был нанесён урон в ${slug?.damage} единиц")
+        if (slug == null) {
+            println("Танк не заряжен")
+        } else {
+            println("Был нанесён урон в ${slug?.damage} единиц")
+        }
     }
-}
 
-fun main() {
-    val tank1 = Tank()
+    fun main() {
+        val tank1 = Tank()
 
-    tank1.newBullets(Bullets.BLUE)
-    tank1. shooting()
-    println()
+        tank1.newBullets(Bullets.BLUE)
+        tank1.shooting()
+        println()
 
-    tank1.newBullets(Bullets.GREEN)
-    tank1.shooting()
-    println()
+        tank1.newBullets(Bullets.GREEN)
+        tank1.shooting()
+        println()
 
-    tank1.newBullets(Bullets.RED)
-    tank1.shooting()
+        tank1.newBullets(Bullets.RED)
+        tank1.shooting()
+    }
 }
